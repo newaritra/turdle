@@ -8,7 +8,7 @@ function App() {
   return (
     <Alert>
       <div className="App">
-        <Header /> 
+        <Header />  
         <Wordle />
       </div>
     </Alert>
