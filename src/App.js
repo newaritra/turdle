@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Header from "./components/Header";
 import Wordle from "./components/Wordle";
 import {Alert} from "./context/Alert";
