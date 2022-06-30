@@ -114,8 +114,16 @@ const Wordle = () => {
     solutionList[Math.floor(solutionList.length * Math.random())]
   );
   useEffect(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      // some code..
+      document.createElement("input").focus();
+    }
     //   console.log(wordsList.length * Math.rand)
-  }, []);
+  });
   const keyDown = (event) => {
     const regex = /[a-z]{1}|[A-Z]{1}/g;
     console.log(solution);
