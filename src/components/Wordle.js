@@ -198,7 +198,7 @@ const Wordle = () => {
       checked[checked.length - 1]?.toLowerCase() === solution
     ) {
       setOver(true);
-      setMessage("You won. " + getInsult("win"));
+      setMessage("You won. " + getInsult("win")); 
       setAlert(true);
       console.log("hurray");
       //The code below removes all types of event listeners from the selected element.
