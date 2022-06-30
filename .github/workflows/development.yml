@@ -23,4 +23,4 @@ jobs:
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: 'turdle-development'
-          heroku_email: 'aritraroy14.ar@gmail.com'
+          heroku_email: 'zafarsaleem3@gmail.com'
