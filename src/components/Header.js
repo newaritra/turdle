@@ -3,9 +3,11 @@ import styled from "styled-components";
 
 const StyledHeader = styled.h3`
   font-weight: 600;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   text-align: center;
   font-size: 3rem;
+  margin-bottom: 1.5rem;
 `;
 const Header = () => {
   return <StyledHeader>Turdle</StyledHeader>;

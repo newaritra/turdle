@@ -73,7 +73,7 @@ const WordContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin-left: 50%;
-  margin-top: 10rem;
+  margin-top: 8rem;
   transform: translateX(-50%);
   position: relative;
 `;
