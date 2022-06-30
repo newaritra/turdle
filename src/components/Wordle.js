@@ -194,7 +194,7 @@ const Wordle = () => {
       checked.find((item) => item.toLowerCase() === solution)
     );
     if (
-      checked.length &&
+      checked.length && 
       checked[checked.length - 1]?.toLowerCase() === solution
     ) {
       setOver(true);
