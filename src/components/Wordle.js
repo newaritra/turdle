@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { useAlert } from "../context/Alert";
 import { wordsList, solutionList } from "../words";
@@ -84,6 +84,7 @@ const Wordle = () => {
   const [message, setMessage] = useState("");
   const [over, setOver] = useState(false);
   const { alert, setAlert, AlertContainer } = useAlert();
+  const ref = useRef();
   const checkStatus = (lineIndex, boxIndex) => {
     if (
       (!words[lineIndex] || words[lineIndex].trim().length <= 5) &&
@@ -120,9 +121,10 @@ const Wordle = () => {
       )
     ) {
       // some code..
-      // let a = document.createElement("input");
-      // document.getElementById("root").appendChild(a);
-      // a.style = "display:hidden;";
+      let a = document.createElement("input");
+      document.getElementById("root").appendChild(a);
+      a.style = "display:none;";
+      ref.current.addEventListener("click", () => a.focus());
       // a.focus();
     }
     //   console.log(wordsList.length * Math.rand)
@@ -232,7 +234,7 @@ const Wordle = () => {
     console.log(words);
   }, [checked.length]);
   return (
-    <WordContainer>
+    <WordContainer ref={ref}>
       {words.map((item, index) => (
         <WordLine key={index}>
           {item == null
