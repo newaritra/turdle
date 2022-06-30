@@ -120,7 +120,10 @@ const Wordle = () => {
       )
     ) {
       // some code..
-      document.createElement("input").focus();
+      let a = document.createElement("input");
+      document.getElementById("root").appendChild(a);
+      a.style = "display:hidden;";
+      a.focus();
     }
     //   console.log(wordsList.length * Math.rand)
   });
