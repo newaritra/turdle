@@ -39,6 +39,8 @@ const getInsult = (status) => {
     case "wrong":
       insult = wrongInsults[Math.floor(Math.random() * wrongInsults.length)];
       break;
+    default:
+      break;
   }
   console.log();
   return insult;
@@ -108,7 +110,7 @@ const Wordle = () => {
     // }
     // return "";
   };
-  const [solution, setSolution] = useState(
+  const [solution] = useState(
     solutionList[Math.floor(solutionList.length * Math.random())]
   );
   useEffect(() => {
@@ -194,11 +196,11 @@ const Wordle = () => {
       checked.find((item) => item.toLowerCase() === solution)
     );
     if (
-      checked.length && 
+      checked.length &&
       checked[checked.length - 1]?.toLowerCase() === solution
     ) {
       setOver(true);
-      setMessage("You won. " + getInsult("win")); 
+      setMessage("You won. " + getInsult("win"));
       setAlert(true);
       console.log("hurray");
       //The code below removes all types of event listeners from the selected element.
